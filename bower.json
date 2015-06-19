@@ -1,0 +1,24 @@
+{
+  "name": "microtext-angular",
+  "version": "0.0.1",
+  "authors": [
+    "Rodrigo Alves <rodrigovieira1994@gmail.com>"
+  ],
+  "description": "A tiny utility for processing text in your Angular apps.",
+  "main": "microtext.angular.js",
+  "moduleType": [
+    "es6"
+  ],
+  "keywords": [
+    "text processing"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rodrigoalvesvieira/angular-microtext",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

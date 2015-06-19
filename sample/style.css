@@ -1,0 +1,18 @@
+body {
+  width: 800px;
+  margin: 0 auto;
+}
+
+div.sampler {
+  margin-bottom: 40px;
+}
+
+h1 {
+  color: #535353;
+  font-family: 'helvetica neue', Helvetica, Arial;
+}
+
+.code {
+  font-family: "Menlo", monospace;
+  color: #4e4f59;
+}

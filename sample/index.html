@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Microtext.js on Angular</title>
+		<script src="angular.min.js"></script>
+		<link rel="stylesheet" href="style.css" charset="utf-8">
+		<script src="../microtext.angular.js" charset="utf-8"></script>
+		<script src="app.js" charset="utf-8"></script>
+	</head>
+	<body ng-app="SampleApp" ng-controller="itemsController">
+
+		<h1>Microtext.js on Angular.js</h1>
+
+		<h3 class="code">truncate</h3>
+		<div class="sampler">
+			<div ng-repeat="item in items">
+				{{ item | truncate: 10 }}
+			</div>
+		</div>
+
+		<h3 class="code">firstName</h3>
+		<div class="sampler">
+			<div ng-repeat="item in items">
+				{{ item | firstName }}
+			</div>
+		</div>
+
+		<h3 class="code">firstName</h3>
+		<div class="sampler">
+			<div ng-repeat="item in items">
+				{{ item | firstName }}
+			</div>
+		</div>
+
+		<h3 class="code">lastName</h3>
+		<div class="sampler">
+			<div ng-repeat="item in items">
+				{{ item | lastName }}
+			</div>
+		</div>
+
+		<h3 class="code">getInitials</h3>
+		<div class="sampler">
+			<div ng-repeat="item in items">
+				{{ item | getInitials }}
+			</div>
+		</div>
+
+		<h3 class="code">abbrevName</h3>
+		<div class="sampler">
+			<div ng-repeat="item in items">
+				{{ item | abbrevName }}
+			</div>
+		</div>
+
+		<h3 class="code">capitalize</h3>
+		<div class="sampler">
+			<div ng-repeat="artist in artists">
+				{{ artist | capitalize }}
+			</div>
+		</div>
+
+		<h3 class="code">hideEmail</h3>
+		<div class="sampler">
+			<div ng-repeat="email in emails">
+				{{ email | hideEmail }}
+			</div>
+		</div>
+
+		<h3 class="code">excerpt</h3>
+		<div class="sample">
+			{{ "Who is John Galt" | excerpt: 'John '}}
+		</div>
+
+		<h3 class="code">parameterize</h3>
+		<div class="sampler">
+			<div ng-repeat="artist in artists">
+				{{ artist | parameterize }}
+			</div>
+		</div>
+
+		<h3 class="code">hideBadWord</h3>
+		<div class="sampler">
+			<div ng-repeat="badWord in badWords">
+				{{ badWord | hideBadWord }}
+			</div>
+		</div>
+	</body>
+</html>
