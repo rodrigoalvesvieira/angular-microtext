@@ -4,13 +4,53 @@ A tiny utility for processing text in your Angular apps. An Angular.js module im
 
 ## Installation
 
-You can install microtext-angular very easily via Bower. Simply execute:
+You can install angular-microtext very easily via Bower. Simply execute:
 
-`$ bower install microtext-angular`
+`$ bower install angular-microtext`
 
 ## Usage
 
-Coming soon...
+Microtext is a regular Angular.js module. You only have to inject it as a dependency of the app in which you wanna use it.
+
+```javascript
+var app = angular.module('SampleApp', ['Microtext']) // Oh yes
+    .controller('itemsController', function($scope) {
+    });
+```
+
+Now you can use all the Microtext methods throughout your HTML templates:
+
+```html
+<!-- truncate -->
+{{ 'The quick brown fox jumps over the lazy dog.' | truncate: 20 }}
+
+<!-- firstName -->
+{{ 'Ayrton Senna' | firstName }}
+
+<!-- lastName !-->
+{{ 'Michael Phelps' | lastName }}
+
+<!-- getInitials !-->
+{{ 'James Cleveland Owens' | getInitials }}
+
+<!-- abbrevName -->
+{{ 'Lionel Messi' | abbrevName }}
+
+<!-- capitalize -->
+{{ 'belchior' | capitalize }}
+
+<!-- hideEmail -->
+{{ 'rodrigovieira1994@gmail.com' | hideEmail }}
+
+<!-- excerpt -->
+{{ "Who is John Galt" | excerpt: 'John '}}
+
+<!-- parameterize -->
+{{ 'Bob Dylan' | parameterize }}
+
+<!-- hideBadWord -->
+{{ 'Boneheaded' | hideBadWord }}
+```
 
 #### Sample
 

@@ -1,5 +1,5 @@
 {
-  "name": "microtext-angular",
+  "name": "angular-microtext",
   "version": "0.0.1",
   "description": "A tiny utility for processing text in your Angular apps",
   "main": "microtext.angular.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rodrigoalvesvieira/microtext-angular"
+    "url": "https://github.com/rodrigoalvesvieira/angular-microtext"
   },
   "keywords": [
     "text processing"
@@ -16,7 +16,7 @@
   "author": "Rodrigo Alves",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rodrigoalvesvieira/microtext-angular/issues"
+    "url": "https://github.com/rodrigoalvesvieira/angular-microtext/issues"
   },
-  "homepage": "https://github.com/rodrigoalvesvieira/microtext-angular"
+  "homepage": "https://github.com/rodrigoalvesvieira/angular-microtext"
 }
