@@ -4,7 +4,7 @@ A tiny utility for processing text in your Angular apps. An Angular.js module im
 
 ## Installation
 
-You can install angular-microtext very easily via Bower. Simply execute:
+You can install angular-microtext very easily via [Bower]. Simply execute:
 
 `$ bower install angular-microtext`
 
@@ -22,34 +22,34 @@ Now you can use all the Microtext methods throughout your HTML templates:
 
 ```html
 <!-- truncate -->
-{{ 'The quick brown fox jumps over the lazy dog.' | truncate: 20 }}
+<p>{{ 'The quick brown fox jumps over the lazy dog.' | truncate: 20 }}</p>
 
 <!-- firstName -->
-{{ 'Ayrton Senna' | firstName }}
+<p>{{ 'Ayrton Senna' | firstName }}</p>
 
 <!-- lastName !-->
-{{ 'Michael Phelps' | lastName }}
+<p>{{ 'Michael Phelps' | lastName }}</p>
 
 <!-- getInitials !-->
-{{ 'James Cleveland Owens' | getInitials }}
+<p>{{ 'James Cleveland Owens' | getInitials }}</p>
 
 <!-- abbrevName -->
-{{ 'Lionel Messi' | abbrevName }}
+<p>{{ 'Lionel Messi' | abbrevName }}</p>
 
 <!-- capitalize -->
-{{ 'belchior' | capitalize }}
+<p>{{ 'belchior' | capitalize }}</p>
 
 <!-- hideEmail -->
-{{ 'rodrigovieira1994@gmail.com' | hideEmail }}
+<p>{{ 'rodrigovieira1994@gmail.com' | hideEmail }}</p>
 
 <!-- excerpt -->
-{{ "Who is John Galt" | excerpt: 'John '}}
+<p>{{ "Who is John Galt" | excerpt: 'John' }}</p>
 
 <!-- parameterize -->
-{{ 'Bob Dylan' | parameterize }}
+<p>{{ 'Bob Dylan' | parameterize }}</p>
 
 <!-- hideBadWord -->
-{{ 'Boneheaded' | hideBadWord }}
+<p>{{ 'Boneheaded' | hideBadWord }}</p>
 ```
 
 #### Sample
@@ -57,8 +57,6 @@ Now you can use all the Microtext methods throughout your HTML templates:
 There's a small sample Angular.js app that uses Microtext inside the `sample` directory.
 
 ## Tests
-
-Coming soon...
 
 ## Author
 
@@ -71,3 +69,4 @@ Released under the MIT License. See LICENSE.txt for details.
 Copyright (c) 2015 Rodrigo Alves
 
 [original Microtext]: https://github.com/rodrigoalvesvieira/microtext.js
+[Bower]: http://bower.io
