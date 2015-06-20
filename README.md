@@ -1,4 +1,4 @@
-# microtext-angular
+# angular-microtext
 
 A tiny utility for processing text in your Angular apps. An Angular.js module implementation of the [original Microtext].
 
@@ -10,15 +10,24 @@ You can install angular-microtext very easily via [Bower]. Simply execute:
 
 ## Usage
 
-Microtext is a regular Angular.js module. You only have to inject it as a dependency of the app in which you wanna use it.
+You only have to inject angular-microtext as a dependency of the app in which you wanna use it:
 
 ```javascript
-var app = angular.module('SampleApp', ['rodrigoalves.microtext']) // Oh yes
+angular.module('SampleApp', ['rodrigoalves.microtext']) // Oh yes
     .controller('itemsController', function($scope) {
-    });
+});
 ```
 
-Now you can use all the Microtext methods throughout your HTML templates:
+You can use it in your controllers, by also injecting `$filter`, like this:
+
+```javascript
+angular.module('SampleApp', ['rodrigoalves.microtext'])
+    .controller('itemsController', function($scope, $filter) {
+        $scope.appName = $filter("parameterize")("angular microtext"); // angular-microtext
+});
+```
+
+Now you can use all the angular-microtext methods throughout your HTML templates:
 
 ```html
 <!-- truncate -->
@@ -54,7 +63,7 @@ Now you can use all the Microtext methods throughout your HTML templates:
 
 #### Sample
 
-There's a small sample Angular.js app that uses Microtext inside the `sample` directory.
+There's a small sample Angular.js app that uses angular-microtext inside the `sample` directory.
 
 ## Tests
 
