@@ -1,4 +1,4 @@
-var app = angular.module('SampleApp', ['Microtext']).controller('itemsController', function($scope) {
+var app = angular.module('SampleApp', ['rodrigoalves.microtext']).controller('itemsController', function($scope) {
     $scope.items = [
         "Rodrigo Alves Vieira",
         "Talita Gomes Pereira Barbosa",
