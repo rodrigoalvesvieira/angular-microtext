@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>angular-microtext by rodrigoalvesvieira</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-dark.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>angular-microtext</h1>
+        <p>A tiny utility for processing text in your Angular apps</p>
+        <p class="view"><a href="https://github.com/rodrigoalvesvieira/angular-microtext">View the Project on GitHub <small>rodrigoalvesvieira/angular-microtext</small></a></p>
+        <ul>
+          <li><a href="https://github.com/rodrigoalvesvieira/angular-microtext/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/rodrigoalvesvieira/angular-microtext/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/rodrigoalvesvieira/angular-microtext">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>You can install angular-microtext very easily via <a href="http://bower.io">Bower</a>. Simply execute:</p>
+
+<p><code>$ bower install angular-microtext</code></p>
+
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>Usage</h2>
+
+<p>You only have to inject angular-microtext as a dependency of the app in which you wanna use it:</p>
+
+<div class="highlight highlight-javascript"><pre>angular.module(<span class="pl-s"><span class="pl-pds">'</span>SampleApp<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>rodrigoalves.microtext<span class="pl-pds">'</span></span>]) <span class="pl-c">// Oh yes</span>
+    .controller(<span class="pl-s"><span class="pl-pds">'</span>itemsController<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">$scope</span>) {
+});</pre></div>
+
+<p>You can use it in your controllers, by also injecting <code>$filter</code>, like this:</p>
+
+<div class="highlight highlight-javascript"><pre>angular.module(<span class="pl-s"><span class="pl-pds">'</span>SampleApp<span class="pl-pds">'</span></span>, [<span class="pl-s"><span class="pl-pds">'</span>rodrigoalves.microtext<span class="pl-pds">'</span></span>])
+    .controller(<span class="pl-s"><span class="pl-pds">'</span>itemsController<span class="pl-pds">'</span></span>, <span class="pl-k">function</span>(<span class="pl-smi">$scope</span>, <span class="pl-smi">$filter</span>) {
+        $scope.<span class="pl-c1">appName</span> <span class="pl-k">=</span> $filter(<span class="pl-s"><span class="pl-pds">"</span>parameterize<span class="pl-pds">"</span></span>)(<span class="pl-s"><span class="pl-pds">"</span>angular microtext<span class="pl-pds">"</span></span>); <span class="pl-c">// angular-microtext</span>
+});</pre></div>
+
+<p>Now you can use all the angular-microtext methods throughout your HTML templates:</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-c">&lt;!-- truncate --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'The quick brown fox jumps over the lazy dog.' | truncate: 20 }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- firstName --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'Ayrton Senna' | firstName }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- lastName !--&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'Michael Phelps' | lastName }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- getInitials !--&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'James Cleveland Owens' | getInitials }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- abbrevName --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'Lionel Messi' | abbrevName }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- capitalize --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'belchior' | capitalize }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- hideEmail --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'rodrigovieira1994@gmail.com' | hideEmail }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- excerpt --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ "Who is John Galt" | excerpt: 'John' }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- parameterize --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'Bob Dylan' | parameterize }}&lt;/<span class="pl-ent">p</span>&gt;
+
+<span class="pl-c">&lt;!-- hideBadWord --&gt;</span>
+&lt;<span class="pl-ent">p</span>&gt;{{ 'Boneheaded' | hideBadWord }}&lt;/<span class="pl-ent">p</span>&gt;</pre></div>
+
+<h4>
+<a id="sample" class="anchor" href="#sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Sample</h4>
+
+<p>There's a small sample Angular.js app that uses angular-microtext inside the <code>sample</code> directory.</p>
+
+<h2>
+<a id="tests" class="anchor" href="#tests" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tests</h2>
+
+<h2>
+<a id="author" class="anchor" href="#author" aria-hidden="true"><span class="octicon octicon-link"></span></a>Author</h2>
+
+<ul>
+<li>Rodrigo Alves <a href="mailto:rodrigovieira1994@gmail.com">rodrigovieira1994@gmail.com</a>
+</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>Released under the MIT License. See LICENSE.txt for details.</p>
+
+<p>Copyright (c) 2015 Rodrigo Alves</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/rodrigoalvesvieira">rodrigoalvesvieira</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
